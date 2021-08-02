@@ -1,0 +1,82 @@
+<!-- {% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Account Information</title> 
+{% endblock %}
+
+{% block body %}
+<h1>Edit Information</h1>
+
+<hr>
+<h2>Edit:</h2>
+<form class="ui form" action="/update/{{todo.id}}", method="post">
+    <div class="field">
+        <label for="title">Website: </label>
+        <input type="text" name="title" value="{{todo.title}}">
+        <br>
+        <br>
+        <label for="email">Email: </label>
+        <input type="text" name="email" value="{{todo.email}}">
+        <br>
+        <br>
+        <label for="password"> Password: </label>
+        <input type="text" name="password" value="{{todo.password}}">
+        <br>
+        <br>
+        <button class="ui blue button" value="submit" type="submit">Save</button>
+    </div>
+
+</form>
+<hr>
+
+{% endblock %} -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+    <hr>
+<h2>Edit:</h2>
+
+<form style="color: #003638; font-family: Helvetica;" action="/update/{{todo.account_id}}}" method='POST'>
+    <label style="font: 25px solid black; font-style: bolder; font-family: Helvetica;" for="title">Website: </label>
+    <input style="margin-top: 10px;"class="form-control" type="text" name='title' id='title' value="{{todo.title}}">
+    <br>
+    <label style="font: 25px solid black; font-style: bolder; font-family: Helvetica;" for="email" >Email: </label>
+    <input style="margin-top: 10px;" class="form-control" type="email" name='email' id='email' value="{{todo.email}}">
+    <br>
+    <label style="font: 25px solid black; font-style: bolder; font-family: Helvetica;" for="password">Password: </label>
+    <input style="margin-top: 10px;" class="form-control" type="password" name='password' id='password' value="{{todo.password}}">
+    <br>
+    <button class="btn btn-primary" style="padding-right: 30px; padding-left: 30px; text-align: center;"type="submit">Edit</button>
+</form>
+
+<!-- <form action="{{url_for('update')}}" method="POST">
+    <div class="form-group">
+       <label>Name:</label>
+        <input type="hidden"  name="id" value="{{row.id}}">
+       <input type="text" class="form-control" name="name" value="{{row.name}}">
+    </div>
+
+    <div class="form-group">
+       <label>Email:</label>
+       <input type="text" class="form-control" name="email" value="{{row.email}}">
+    </div>
+    <div class="form-group">
+       <label>Phone:</label>
+       <input type="text" class="form-control" name="phone" value="{{row.phone}}">
+    </div>
+    <div class="form-group">
+       <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+ </form> -->
+<hr>
+{% endblock %}
